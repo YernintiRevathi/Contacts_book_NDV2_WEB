@@ -108,6 +108,9 @@ The final step is to give Java the tool it needs to talk to MySQL.
     *   **In an IDE (Eclipse, IntelliJ):** Right-click your project, go to `Build Path` > `Configure Build Path` > `Libraries` > `Add External JARs...`, and select the downloaded file.
     *   Or add the jar file in lib folder as it is done here
 3.  **Run the application**: Compile and run the `Main.java` file. The contact book menu will appear in your console!
+               <br><br> javac -cp "lib/mysql-connector-j-9.3.0.jar" -d bin src/Main.java src/Contact.java src/ContactDAO.java src/DBConnection.java
+                <br> #-cp tells the classpath and -d bin for adding the class files generated into bin folder
+               <br><br> java -cp "bin;lib\mysql-connector-j-9.0.0.jar" Main
 
 ---
 with 💖 by **Revathi**

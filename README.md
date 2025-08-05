@@ -34,11 +34,11 @@ Here’s a simple data flow for adding a new contact:
 
 ```mermaid
 graph TD;
-    A[👨‍💻 User] -->|1. Enters contact details| B(⌨️ Main.java);
-    B -->|2. Creates a `Contact` object| C(🗂️ ContactDAO.java);
-    C -->|3. Asks for a DB connection| D(🔌 DBConnection.java);
-    D -->|4. Connects to MySQL| E(🗄️ MySQL Database);
-    C -->|5. Executes INSERT query| E;
+    A[👨‍💻 User] -->|Enters contact details| B(⌨️ Main.java);
+    B -->|Creates a Contact object| C(🗂️ ContactDAO.java);
+    C -->|Asks for a DB connection| D(🔌 DBConnection.java);
+    D -->|Connects to MySQL| E(🗄️ MySQL Database);
+    C -->|Executes INSERT query| E;
 
     subgraph "User Interface"
         B
@@ -52,7 +52,9 @@ graph TD;
     subgraph "Database"
         E
     end
+     
 ```
+
 *   `Main.java` handles what the user sees.
 *   `ContactDAO.java` handles the "how" of database actions.
 *   `DBConnection.java` manages the connection details.

@@ -116,11 +116,11 @@ public class Main {
                         return;
 
                     default: // Invalid option
-                        System.out.println("❗ Invalid option. Please choose a number between 1 and 6.");
+                        System.out.println(" Invalid option. Please choose a number between 1 and 6.");
                 }
             } catch (InputMismatchException e) {
                 // Catch the exception if the user enters non-integer input for the menu choice.
-                System.out.println("❗ Invalid input. Please enter a number.");
+                System.out.println(" Invalid input. Please enter a number.");
                 scanner.nextLine(); // Clear the invalid input from the scanner.
             }
         }

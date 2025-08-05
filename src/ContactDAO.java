@@ -36,6 +36,7 @@ public class ContactDAO {
         } catch (SQLException e) {
             System.out.println("Error adding contact: " + e.getMessage());
             e.printStackTrace();
+            return ; // Return null to indicate that the operation failed.
         }
     }
 
@@ -71,6 +72,7 @@ public class ContactDAO {
         } catch (SQLException e) {
             System.out.println("Error retrieving contacts: " + e.getMessage());
             e.printStackTrace();
+            return null; // Return null if there was an error retrieving contacts.
         }
         // Return the list of contacts.
         return contacts;
@@ -108,6 +110,7 @@ public class ContactDAO {
         } catch (SQLException e) {
             System.out.println("Error searching contacts: " + e.getMessage());
             e.printStackTrace();
+            return null; // Return null if there was an error searching contacts.
         }
         return contacts;
     }
@@ -135,11 +138,12 @@ public class ContactDAO {
             if (rowsAffected > 0) {
                 System.out.println("✅ Contact updated successfully!");
             } else {
-                System.out.println("❌ Contact not found. Update failed.");
+                System.out.println(" Contact not found. Update failed.");
             }
         } catch (SQLException e) {
             System.out.println("Error updating contact: " + e.getMessage());
             e.printStackTrace();
+            return ;
         }
     }
 
@@ -160,13 +164,14 @@ public class ContactDAO {
 
             // Check if a row was actually deleted.
             if (rowsAffected > 0) {
-                System.out.println("🗑️ Contact deleted successfully!");
+                System.out.println(" Contact deleted successfully!");
             } else {
-                System.out.println("❌ Contact not found. Deletion failed.");
+                System.out.println(" Contact not found. Deletion failed.");
             }
         } catch (SQLException e) {
             System.out.println("Error deleting contact: " + e.getMessage());
             e.printStackTrace();
+            return ; // Return null to indicate that the operation failed.
         }
     }
 }

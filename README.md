@@ -69,9 +69,8 @@ Follow these steps to get the project running on your local machine.
 First, get a copy of the project on your computer. Open your terminal and run:
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/YernintiRevathi/Contacts_book_NDV2_WEB 
 ```
-*(Replace `<your-repository-url>` with the actual link to this repository)*
 
 <br>
 
